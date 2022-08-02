@@ -1,4 +1,5 @@
 # HTML Employee Page Generator
+![walkthrough](https://user-images.githubusercontent.com/63832314/182267052-ba86d581-d3e8-4a0a-a32b-9d70d7961ec0.gif)
 
 ## Description
 
