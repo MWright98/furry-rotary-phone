@@ -69,8 +69,8 @@ const promptUser = () => {
 
 const promptProject = portfolioData => {
     // If there's no 'projects' array property, create one
-    if (!portfolioData.projects) {
-        portfolioData.projects = [];
+    if (!portfolioData.employees) {
+        portfolioData.employees = [];
     }
     console.log(`
   =================
@@ -193,13 +193,13 @@ const promptProject = portfolioData => {
         }
 
     ])
-        .then(projectData => {
-            portfolioData.projects.push(projectData);
-            if (projectData.confirmAddEmployee) {
-                return promptProject(portfolioData);
-            } else {
-                return portfolioData;
-            }
+    .then((employeeData) => {
+        portfolioData.employees.push(employeeData);
+        if (employeeData.confirmAddEmployee) {
+          return promptProject(portfolioData);
+        } else {
+          return portfolioData;
+        }
         });
 
 };
